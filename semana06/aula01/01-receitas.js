@@ -26,6 +26,15 @@ const recipes = [
     }
 ]
 
+const filterRecipes = recipes.forEach((item) => {
+    item.ingredients.find((item2) => {
+        return item2 == "queijo"
+    })
+})
+
+console.log(filterRecipes);
+
+
 class Recipe {
     constructor(name, ingredients, minutes) {
         this.name = name
