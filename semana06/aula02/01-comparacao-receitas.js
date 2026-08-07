@@ -24,9 +24,9 @@ const recipes = [
     }
 ]
 
-const recipe = recipes[1]
+const recipe = recipes[0]
 
-// console.log("Receita:", recipe.name)
+console.log("Receita:", recipe.name)
 // console.log("Despensa:", pantry)
 // console.log("Ingredientes:", recipe.ingredients)
 
@@ -50,6 +50,24 @@ recipe.ingredients.forEach((item) => {
     }
 })
 
+const totalIngredients = recipe.ingredients.length
+const totalHave = have.length
+const totalMissing = missing.length
+
+
 console.log("Tenho:", have);
 console.log("Falta:", missing);
 
+/*
+console.log(totalIngredients);
+console.log(totalHave);
+console.log(totalMissing);
+*/
+
+const result = (100 * totalHave) / totalIngredients
+
+console.log(result.toFixed(2) + "%");
+
+function analyzeRecipe(recipe) {
+
+}
