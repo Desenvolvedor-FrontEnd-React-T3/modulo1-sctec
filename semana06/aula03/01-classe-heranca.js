@@ -38,11 +38,42 @@ const recipes = [
     }
 ]
 
+const dessertRecipes = [
+    {
+        name: "Pudim",
+        ingredients: [
+            "leite", "açúcar", "ovo", "baunilha"
+        ],
+        minutes: 60,
+        chillTime: 120
+    },
+    {
+        name: "Sorvete",
+        ingredients: [
+            "leite", "açúcar", "ovo", "morango"
+        ],
+        minutes: 30,
+        chillTime: 60
+    },
+    {
+        name: "Bolo de chocolate",
+        ingredients: [
+            "farinha", "açúcar", "ovo", "chocolate", "manteiga"
+        ],
+        minutes: 45,
+        chillTime: 30
+    }
+]
+
 class Recipe {
     constructor(name, ingredients, minutes) {
         this.name = name
         this.ingredients = ingredients
         this.minutes = minutes
+    }
+
+    describe() {
+        return console.log(`${this.name} - ${this.ingredients.length} ingredientes, ${this.minutes}min.`)
     }
 
     analyze() {
@@ -81,14 +112,72 @@ class DessertRecipes extends Recipe {
         this.chillTime = chillTime
     }
 
+    describe() {
+        return console.log(`${this.name} (sobremesa) - ${this.ingredients.length} ingredientes, ${this.minutes}min + ${this.chillTime}min de resfriamento.`)
+    }
+
     totalTime() {
-        return this.minutes + this.chillTime
+        return console.log(`Tempo total: ${this.minutes + this.chillTime} minutos.`)
     }
 }
 
+/*
 const recipe1 = new Recipe("Receita teste", ["carne", "arroz", "feijão"], 45)
 recipe1.analyze()
 
 const recipe2 = new DessertRecipes("Sobremesa teste", ["leite", "açúcar", "chocolate"], 30, 60)
 recipe2.analyze()
-console.log(recipe2.totalTime() + " minutos no total.")
+recipe2.totalTime()
+*/
+
+function loadRecipes() {
+    return new Promise((resolve) => {
+        console.log("Carregando receitas do servidor...")
+        setTimeout(() => {
+            resolve(recipes)
+        }, 3000)
+    })
+}
+
+function loadDessertRecipes() {
+    return new Promise((resolve) => {
+        console.log("Carregando receitas de sobremesa do servidor...")
+        setTimeout(() => {
+            resolve(dessertRecipes)
+        }, 3000)
+    })
+}
+
+async function start() {
+    try {
+        const data = await loadRecipes()
+
+        const loadedRecipes = data.map((item) => {
+            return new Recipe(item.name, item.ingredients, item.minutes)
+        })
+
+        const dessertData = await loadDessertRecipes()
+
+        const loadedDessertRecipes = dessertData.map((item) => {
+            return new DessertRecipes(item.name, item.ingredients, item.minutes, item.chillTime)
+        })
+
+        console.log("Receitas carregadas com sucesso!")
+        
+        loadedRecipes.forEach((recipe) => {
+            recipe.describe()
+            recipe.analyze() 
+        })
+
+        loadedDessertRecipes.forEach((dessertRecipe) => {
+            dessertRecipe.describe()
+            dessertRecipe.analyze()
+            dessertRecipe.totalTime()
+        })
+
+    } catch (error) {
+        console.log("Erro ao carregar receitas: " + error)
+    }
+}
+
+start()
