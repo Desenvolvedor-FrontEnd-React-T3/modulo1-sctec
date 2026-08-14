@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+BR+Guides&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+.playwrite-font {
+  font-family: "Playwrite BR Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+}
+
+body {
+  font-family: "Fira Code", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 8px;
+  border: double red 4px;
+}
+
+#text-special {
+  letter-spacing: 2px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
+}
