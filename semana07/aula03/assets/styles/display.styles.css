@@ -1,0 +1,50 @@
+/* Reset do CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #eeece6;
+}
+
+body {
+  max-width: 640px;
+  margin: 12px auto;
+  padding: 26px;
+  background-color: white;
+}
+
+#centered {
+  width: 60px;
+  height: 60px;
+  background-color: darkred;
+  margin: 0 auto;
+}
+
+#inline {
+  display: inline;
+  width: 1024px; /* Inútil ao usar display inline */
+  height: 400px; /* Inútil ao usar display inline */
+}
+
+#block {
+  display: block;
+}
+
+button {
+  padding: 12px;
+  border-radius: 8px;
+  background-color: aqua;
+}
+
+button:hover {
+  background-color: black;
+  color: aqua;
+}
+
+a:focus-visible {
+  outline: 2px solid red;
+  outline-offset: 2px;
+}
