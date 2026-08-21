@@ -1,0 +1,83 @@
+<!-- MURAL DE EVENTOS DO BAIRRO
+     Abrir: botão direito neste arquivo → "Open with Live Server"
+
+     index.html                       o que a coisa É
+     assets/styles/index.style.css    como ela APARECE
+     assets/scripts/index.script.js   o que ela FAZ -->
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/index.style.css" />
+    <title>Mural do Bairro</title>
+  </head>
+  <body>
+    <header>
+      <h1>Mural do bairro</h1>
+      <p>O que vai acontecer por aqui <strong>nesta semana</strong></p>
+      <button id="theme-button">Modo escuro 🌙</button>
+    </header>
+
+    <!-- Sem <form> em volta: a tag existe, é importante, e é a Semana 9
+         inteira. Aqui o campo trabalha solto. -->
+    <section class="controls">
+      <input
+        type="text"
+        class="search-input"
+        id="search-input"
+        placeholder="Buscar pelo nome do evento..."
+      />
+
+      <div class="filters">
+        <button class="filter-button active">Todos</button>
+        <button class="filter-button">Música</button>
+        <button class="filter-button">Feira</button>
+        <button class="filter-button">Esporte</button>
+      </div>
+    </section>
+    <!-- Nasce vazio de propósito: quem escreve o texto é o JavaScript. -->
+    <p class="counter" id="counter"></p>
+    <!-- ⚠️ Os seis cartões, escritos na mão. É daqui que a aula de hoje parte. -->
+    <main id="event-list">
+      <article class="event-card">
+        <span class="tag">Música</span>
+        <h2>Sarau na praça</h2>
+        <p class="event-info">Sexta, 19h · Praça Central</p>
+      </article>
+
+      <article class="event-card">
+        <span class="tag">Feira</span>
+        <h2>Feira de troca de plantas</h2>
+        <p class="event-info">Sábado, 9h · Rua das Flores</p>
+      </article>
+
+      <article class="event-card">
+        <span class="tag">Esporte</span>
+        <h2>Torneio de futebol</h2>
+        <p class="event-info">Sábado, 16h · Campo do Bairro</p>
+      </article>
+
+      <article class="event-card">
+        <span class="tag">Música</span>
+        <h2>Roda de samba</h2>
+        <p class="event-info">Sábado, 20h · Centro Cultural</p>
+      </article>
+
+      <article class="event-card">
+        <span class="tag">Feira</span>
+        <h2>Feira do produtor</h2>
+        <p class="event-info">Domingo, 8h · Praça Central</p>
+      </article>
+
+      <article class="event-card">
+        <span class="tag">Esporte</span>
+        <h2>Caminhada matinal</h2>
+        <p class="event-info">Domingo, 7h · Parque Municipal</p>
+      </article>
+    </main>
+
+    <script src="./assets/scripts/index.script.js"></script>
+  </body>
+</html>
