@@ -92,3 +92,11 @@ applyFilters();
    2. a gente conserta a tela no detalhe, cartão por cartão
    3. o map e o filter da Semana 4 estão parados — não existe array aqui
    4. não dá para acrescentar nem remover evento sem editar o HTML na mão */
+
+const eventsList = [
+  {
+    categoria: "Feira",
+    nome: "Feira do produtor",
+    horario: "Domingo, 8h · Praça Central",
+  },
+];
