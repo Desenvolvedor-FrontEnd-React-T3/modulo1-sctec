@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulários</title>
+  </head>
+  <body>
+    <form action="./teste.html">
+      <h2>Label e Input</h2>
+
+      <fieldset>
+        <legend>Dados de Acesso</legend>
+        <div>
+          <label for="fullname">Nome Completo</label>
+          <input
+            id="fullname"
+            type="text"
+            name="fullname"
+            placeholder="John Doe"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="useremail">E-mail</label>
+          <input
+            id="useremail"
+            type="email"
+            name="useremail"
+            placeholder="email@exemplo.com"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="age">Idade</label>
+          <input id="age" type="number" name="age" min="0" max="130" />
+        </div>
+
+        <div>
+          <label for="password">Senha</label>
+          <input
+            id="password"
+            type="password"
+            name="password"
+            required
+            minlength="6"
+            maxlength="10"
+          />
+        </div>
+      </fieldset>
+
+      <hr />
+
+      <h2>Tipos de Inputs</h2>
+
+      <div>
+        <label for="cellphone">Celular</label>
+        <input id="cellphone" type="tel" name="cellphone" />
+      </div>
+
+      <div>
+        <label for="date">Data de Nascimento</label>
+        <input
+          id="date"
+          type="date"
+          name="date"
+          min="2026-08-25"
+          max="2026-09-09"
+        />
+      </div>
+
+      <div>
+        <label for="color">Cor preferida</label>
+        <input id="color" type="color" name="color" />
+      </div>
+
+      <hr />
+
+      <h2>Listas e seleções</h2>
+
+      <div>
+        <label for="city">Cidade de Nascimento</label>
+        <input id="city" type="text" name="city" />
+      </div>
+
+      <div>
+        <label for="state">Estado de Nascimento</label>
+        <select name="state" id="state" required>
+          <option value="">Escolha o estado</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="PA">Pará</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="PE">Pernambuco</option>
+          <option value="BA">Bahia</option>
+        </select>
+      </div>
+
+      <div>
+        <p>Estado Civil</p>
+        <label for="married">Casado(a)</label>
+        <input type="radio" id="married" name="civil" value="Casado(a)" />
+
+        <label for="single">Solteiro(a)</label>
+        <input type="radio" id="single" name="civil" value="Solteiro(a)" />
+
+        <label for="widower">Viúvo(a)</label>
+        <input type="radio" id="widower" name="civil" value="Viúvo(a)" />
+      </div>
+
+      <div>
+        <p>Veículos</p>
+        <label for="bike">Moto</label>
+        <input id="bike" type="checkbox" name="vehicle" value="Moto" />
+
+        <label for="car">Carro</label>
+        <input id="car" type="checkbox" name="vehicle" value="Carro" />
+      </div>
+
+      <div>
+        <label for="bio">Digite a sua bio</label>
+        <textarea
+          name="bio"
+          id="bio"
+          cols="26"
+          rows="4"
+          style="resize: none"
+        ></textarea>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
