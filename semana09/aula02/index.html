@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulários - Javascript</title>
+  </head>
+  <body>
+    <h3>Formulários - Javascript</h3>
+
+    <p>Cadastro de Perfil</p>
+    <form>
+      <div>
+        <label for="name">Digite o seu nome</label>
+        <input id="name" name="name" type="text" />
+      </div>
+
+      <div>
+        <label for="age">Digite a sua idade</label>
+        <input id="age" name="age" type="number" />
+      </div>
+
+      <div>
+        <label for="studentLevel">Selcione seu nível de graduação</label>
+
+        <select id="studentLevel" name="studentLevel">
+          <option value="">Selecione...</option>
+          <option value="em">Ensino Médio</option>
+          <option value="sup">Ensino Superior</option>
+          <option value="pos">Pós Graduação</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="terms">Li termos de uso</label>
+        <input id="terms" name="terms" type="checkbox" />
+      </div>
+      <div>
+        <label for="politics">Li políticas de privacidade</label>
+        <input id="politics" name="politics" type="checkbox" />
+      </div>
+
+      <fieldset>
+        <legend>Selecione o gênero que você se identifica</legend>
+        <label for="male">Masculino</label>
+        <input id="male" name="gender" type="radio" value="Masculino" />
+
+        <label for="female">Feminino</label>
+        <input
+          id="female"
+          name="gender"
+          type="radio"
+          value="Feminino"
+          required
+        />
+      </fieldset>
+
+      <button>Cadastrar</button>
+    </form>
+
+    <p id="success"></p>
+
+    <div id="userData"></div>
+    <script src="./assets/scripts/index.script.js"></script>
+  </body>
+</html>
