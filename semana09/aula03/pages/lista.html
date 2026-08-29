@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../assets/styles/lista.styles.css" />
+    <title>Lista de Presença</title>
+  </head>
+  <body>
+    <h2>Lista de Presença no Churrasco</h2>
+
+    <form id="form">
+      <fieldset>
+        <div id="guest-input">
+          <label for="guest">Nome do Convidado</label>
+          <input id="guest" name="guest" type="text" required />
+          <p id="name-error"></p>
+        </div>
+
+        <div>
+          <label for="dish">O que vai levar</label>
+          <select name="dish" id="dish" required>
+            <option value="">Selecione o prato</option>
+            <option value="carne">Carne</option>
+            <option value="maionese">Maionese</option>
+            <option value="bebida">Bebida</option>
+            <option value="pao">Pão de Alho</option>
+            <option value="farofa">Farofa</option>
+          </select>
+        </div>
+
+        <button>Adicionar o convidado</button>
+      </fieldset>
+    </form>
+
+    <fieldset>
+      <h2>Quem já confirmou</h2>
+      <p id="counter">0 confirmado(s)</p>
+      <ul id="list"></ul>
+    </fieldset>
+
+    <script src="../assets/scripts/lista.script.js"></script>
+  </body>
+</html>

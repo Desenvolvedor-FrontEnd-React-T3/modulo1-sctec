@@ -17,7 +17,7 @@ form.addEventListener("submit", (e) => {
   // console.log(eventName);
 
   const sameTitle = list.filter((item) => {
-    return item == eventName;
+    return item.toLowerCase() == eventName.toLowerCase();
   });
 
   if (sameTitle.length > 0) {

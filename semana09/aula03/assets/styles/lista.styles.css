@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 640px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  margin: 18px 0;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+button {
+  margin: 12px 0;
+  padding: 6px;
+}
+
+#name-error {
+  color: red;
+}
