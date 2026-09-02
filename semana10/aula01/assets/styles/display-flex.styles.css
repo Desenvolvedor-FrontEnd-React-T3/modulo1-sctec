@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bus-card {
+  border: 1px solid #044304;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.horizontal {
+  display: flex;
+  gap: 16px;
+}
