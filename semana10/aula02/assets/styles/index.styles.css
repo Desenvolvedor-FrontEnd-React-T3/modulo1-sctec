@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #2b2a26;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.links {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: #2b5b8a;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+button {
+  font-family: inherit;
+  font-size: 16px;
+  padding: 8px 12px;
+  border: 0;
+  background-color: #d9d9d9;
+  color: #2b2a26;
+  cursor: pointer;
+}
+
+.search {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.search-field {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  border: 1px solid #6b7480;
+}
+
+.search-button,
+.card-button {
+  background-color: #1f7a4d;
+  color: #ffffff;
+}
+
+.services {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.service {
+  border: 1px solid #cfd8e3;
+  padding: 12px;
+  flex: 1;
+  text-align: center;
+}
+
+.featured {
+  background-color: #fdf4e3;
+  border: 1px solid #e0a02a;
+  flex: 2;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.service-name {
+  font-size: 16px;
+}
+
+.service-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+.service-note {
+  font-size: 12px;
+  color: #4a4a4a;
+}
+
+.card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid #cfd8e3;
+  background-color: #f7f9fc;
+  padding: 12px;
+}
+
+.card-title {
+  font-size: 16px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.card-price {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1f6b3a;
+}
+
+.products {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* */
+.tag {
+  font-size: 12px; /* */
+  padding: 4px 6px;
+  align-self: flex-start;
+  color: #ffffff;
+}
+
+.tag-sale {
+  background-color: #7a1f2b;
+}
+
+.tag-new {
+  background-color: #1f4f7a;
+}
