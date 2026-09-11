@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #2b2a26;
+  background-color: #f4f2ec;
+  margin: 0;
+  padding: 24px 16px;
+}
+
+.paper {
+  max-width: 760px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #d8d5cb;
+  padding: 26px;
+}
+
+/* ───── CABEÇALHO ───── */
+.topo,
+header {
+  border-bottom: 3px solid #2b2a26;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.titulo,
+header h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 38px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.subtitulo {
+  font-size: 14px;
+  color: #6e6c63;
+  margin: 4px 0 0;
+}
+
+/* ───── CONTEÚDO PRINCIPAL ─────
+   `display: block` não é enfeite: o <main> é uma tag relativamente nova, e
+   navegadores antigos não sabiam que ela era um bloco. É a única regra da folha
+   que existe por causa do passado. */
+.conteudo,
+main {
+  display: block;
+}
+
+/* ───── MENU ───── */
+/* Flexbox e gap são da Semana 10 — a primeira folha do módulo a usá-los. */
+.menu,
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  border-bottom: 1px solid #d8d5cb;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.menu-item,
+nav a {
+  color: #1f5c8b;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ───── MATÉRIAS ───── */
+.materia,
+article {
+  border-bottom: 1px solid #e3e1d9;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+
+.materia-titulo,
+article h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 23px;
+  line-height: 1.25;
+  margin: 0 0 4px;
+}
+
+.materia-data {
+  font-size: 13px;
+  color: #6e6c63;
+  margin: 0 0 12px;
+}
+
+.materia-foto {
+  max-width: 100%;
+  border: 1px solid #d8d5cb;
+  margin-bottom: 12px;
+}
+
+.materia-texto,
+article p {
+  margin: 0;
+}
+
+/* ───── COLUNA DE SERVIÇOS ───── */
+.lateral,
+aside {
+  background-color: #f7f6f1;
+  border-left: 4px solid #f2c14e;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.lateral-titulo,
+aside h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.lateral-texto,
+aside p {
+  margin: 0 0 4px;
+}
+
+/* ───── RODAPÉ ───── */
+.rodape,
+footer {
+  border-top: 1px solid #d8d5cb;
+  padding-top: 12px;
+  font-size: 14px;
+  color: #6e6c63;
+}
+
+.rodape-texto,
+footer p {
+  margin: 0;
+}
