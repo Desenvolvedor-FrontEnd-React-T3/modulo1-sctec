@@ -1,0 +1,21 @@
+{
+  "name": "aula01",
+  "version": "1.0.0",
+  "description": "Introdução ao Node.JS",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "intro"
+  ],
+  "author": "Felipe Santos",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "prompt-sync": "^4.2.0"
+  }
+}
