@@ -1,3 +1,6 @@
+import users from "../data/users.data.js";
+console.log(users);
+
 console.log("Fetch API");
 
 const uf = document.getElementById("uf");
